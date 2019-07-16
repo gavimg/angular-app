@@ -1,0 +1,8 @@
+<ol class="breadcrumb" *ngIf="breadcrumbs.length">
+  <li *ngFor="let breadcrumb of breadcrumbs"
+      class="breadcrumb-item">
+    <a [routerLink]="[breadcrumb.url, breadcrumb.params]">
+      {{ breadcrumb.label }}
+    </a>
+  </li>
+</ol>

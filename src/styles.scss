@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+@import './theme/variables';
+@import '~font-awesome/css/font-awesome.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,600,500,400,300');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d5dae5;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,46 @@
+<div class="side-nav" [ngClass]="{'visible': showOrHideMenu }">
+  <div class="logo">
+    <i class="fa fa-tachometer"></i>
+    <span>Brand</span>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a [routerLink]="['users']">
+          <span><i class="fa fa-user"></i></span>
+          <span>Users</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['posts']">
+          <span><i class="fa fa-user"></i></span>
+          <span>Posts</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <span><i class="fa fa-envelope"></i></span>
+        <span>Messages</span>
+      </a>
+      </li>
+      <li>
+        <a href="#">
+          <span><i class="fa fa-bar-chart"></i></span>
+          <span>Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span><i class="fa fa-credit-card-alt"></i></span>
+          <span>Payments</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <span><i class="fa fa-star"></i></span>
+        <span>Help</span>
+       </a>
+     </li>
+    </ul>
+  </nav>
+</div>
