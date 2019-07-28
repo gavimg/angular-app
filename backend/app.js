@@ -1,48 +1,42 @@
+const path = require('path');
 const express = require('express');
 
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const Post = require('./models/post');
+const postRoutes = require('./routes/posts');
+const userRoutes = require('./routes/user');
 
 const app  = express();
 
+const MONGODB_URI = 'mongodb+srv://gavi_mg:gavi_931@cluster0-uxnpr.mongodb.net/meanapp?'
+
+mongoose.connect(MONGODB_URI)
+.then(() => {
+  console.log('Connected to database!');
+})
+.catch(() => {
+  console.log('Connection failed!');
+})
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use("/images", express.static(path.join("backend/images")));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*")
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept")
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization")
   res.setHeader(
     "Access-Control-Allow-Methods",
-    "GET, POST, DELETE, PATCH, OPTIONS")
+    "GET, POST, PUT, DELETE, PATCH, OPTIONS")
   next()
 })
 
-app.post('/api/posts', (req, res, next) => {
-  const post  = req.body;
-  console.log(post)
-  res.status(201).json({
-    message: 'Post save successfully!'
-  });
-})
-
-app.use('/api/posts', (req, res, next) => {
-  const posts = [
-    {
-      id: '1',
-      title: 'First server side post',
-      content: 'This is coming from server'
-    },
-    {
-      id: '2',
-      title: 'Second server side post',
-      content: 'This is also coming from server'
-    }
-  ];
-  res.status(200).json({
-    message: 'Post fetched successfully!',
-    posts: posts
-  });
-})
+app.use("/api/posts",postRoutes);
+app.use('/api/user', userRoutes);
 
 module.exports = app;

@@ -7,7 +7,8 @@
     grid-gap: 0px 0px;
     justify-items: center;
     align-items: center;
-    background-image: linear-gradient(#fff5f5 60%, #f2fbf8 40%);
+    // background-image: linear-gradient(#fff5f5 60%, #f2fbf8 40%);
+    background-color: #222640;
     .login-form {
         .form-container {
             background-color: #f8f8f3;
@@ -32,16 +33,24 @@
                 }
             }
             .form-content {
+              margin: 1rem 0;
                 mat-form-field {
                     width: 100%;
-                    &:first-of-type {
-                        margin-bottom: 1rem;
-                    }
+                    margin-top: 1.5rem;
+                }
+                .error {
+                  margin: 0;
+                  padding: 0;
+                  text-align: left;
+                  color: #ec4444;
                 }
             }
             .form-footer {
                 .error {
                     color: #ec4444;
+                    text-align: center;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-size: 1rem;
                 }
                 button {
                     width: 100%;
@@ -80,10 +89,11 @@
     .login {
         .login-form {
             .form-container {
-                width: 600px;
+                width: 400px;
                 height: auto;
                 padding: 20px;
                 border: 1px solid #f1f1f1;
+                border-radius: 5px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 .form-footer {
                     text-align: left;

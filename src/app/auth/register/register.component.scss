@@ -1,0 +1,111 @@
+
+
+.register {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  grid-gap: 0px 0px;
+  justify-items: center;
+  align-items: center;
+  // background-image: linear-gradient(#fff5f5 60%, #f2fbf8 40%);
+  background-color: #222640;
+  .register-form {
+      .form-container {
+          background-color: #f8f8f3;
+          text-align: center;
+          width: 100vw;
+          height: 100vh;
+          position: relative;
+          .form-header {
+              .img-circle {
+                  display: block;
+                  width: 150px;
+                  height: 150px;
+                  margin: 1em auto;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                  -webkit-border-radius: 99em;
+                  -moz-border-radius: 99em;
+                  border-radius: 99em;
+                  border: 5px solid #eee;
+                  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+              }
+          }
+          .form-content {
+            margin: 1rem 0;
+              mat-form-field {
+                  width: 100%;
+                  margin-top: 1.5rem;
+              }
+              .error {
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                color: #ec4444;
+              }
+          }
+          .form-footer {
+              .error {
+                  color: #ec4444;
+                  text-align: center;
+                  font-family: 'Source Sans Pro', sans-serif;
+                  font-size: 1rem;
+              }
+              button {
+                  width: 100%;
+                  margin: 10px 0;
+              }
+              .register-btn {
+                  background-color: #08df97;
+                  color: #fff;
+                  border: 1px solid #04b479;
+                  border-radius: 3px;
+              }
+              .signup-btn {
+                  background-color: #1586eb;
+                  color: #fff;
+                  border: 1px solid #077ce6;
+                  border-radius: 3px;
+              }
+          }
+      }
+  }
+}
+
+@media screen and (max-width:  600px) {
+  .register {
+      .register-form {
+          .form-container {
+              position: absolute;
+              top: 0;
+              left: 0;;
+              padding: 100px 10px 10px 10px;
+          }
+      }
+  }
+}
+@media screen and (min-width:  600px) {
+  .register {
+      .register-form {
+          .form-container {
+              width: 400px;
+              height: auto;
+              padding: 20px;
+              border: 1px solid #f1f1f1;
+              border-radius: 5px;
+              box-shadow: 0 0 5px 2px #ce3333;
+              .form-footer {
+                  text-align: left;
+                  button {
+                      width: 49%;
+                      margin: 10px 0;
+                  }
+                  .signup-btn {
+                      float: right;
+                  }
+              }
+          }
+      }
+  }
+}

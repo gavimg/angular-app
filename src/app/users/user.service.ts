@@ -7,13 +7,4 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  /**
-   * Fetch users
-   */
-  fetchAllGithubUsers(): Observable<any> {
-    let url = 'https://reqres.in/api/users';
-    url = 'https://api.github.com/users';
-
-    return this.httpClient.get(url);
-  }
 }

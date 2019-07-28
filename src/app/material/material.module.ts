@@ -8,6 +8,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import {
   MatToolbarModule,
   MatExpansionModule
@@ -31,6 +32,7 @@ import {TableModule} from 'primeng/table';
     MatCardModule,
     MatToolbarModule,
     MatExpansionModule,
+    MatPaginatorModule,
     // primeng module
     TableModule
   ],
@@ -46,6 +48,7 @@ import {TableModule} from 'primeng/table';
     MatCardModule,
     MatToolbarModule,
     MatExpansionModule,
+    MatPaginatorModule,
     // primeng module
     TableModule
   ]

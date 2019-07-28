@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AuthRoutingModule } from './auth-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
@@ -12,10 +11,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   declarations: [RegisterComponent, LoginComponent, ResetPasswordComponent],
   imports: [
     CommonModule,
-    AuthRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
     FormsModule
+  ],
+  exports: [
+    RegisterComponent,
+    LoginComponent,
+    ResetPasswordComponent
   ]
 })
 export class AuthModule { }
