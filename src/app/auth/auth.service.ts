@@ -4,6 +4,8 @@ import { AuthData } from '../models/auth-data.model';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 
+import { environment } from '../../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -38,9 +40,9 @@ export class AuthService {
       email,
       password
     };
-    this.http.post('http://localhost:3000/api/user/signup', authData)
+    this.http.post( environment.apiUrl + '/user/signup', authData)
     .subscribe(response => {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/auth/login']);
     }, error => {
       this.authStatusListner.next(false);
     });
@@ -52,7 +54,7 @@ export class AuthService {
       email,
       password
     };
-    this.http.post<{ token: string, expiresIn: number, userId: string}>('http://localhost:3000/api/user/login', authData)
+    this.http.post<{ token: string, expiresIn: number, userId: string}>(environment.apiUrl + '/user/login', authData)
     .subscribe(response => {
       const token = response.token;
       this.token = token;
@@ -95,7 +97,7 @@ export class AuthService {
     clearTimeout(this.tokenTimer);
     this.clearAuthData();
     this.userId = null;
-    this.router.navigate(['/login']);
+    this.router.navigate(['/auth/login']);
   }
 
 

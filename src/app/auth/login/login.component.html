@@ -21,7 +21,7 @@
       <div class="form-footer">
         <p class="lead error" *ngIf="loginError">Invalid Email or Password!!</p>
         <button class="btn login-btn">Login</button>
-        <button class="btn signup-btn" type="button" [routerLink]="['/register']">Sign Up</button>
+        <button class="btn signup-btn" type="button" [routerLink]="['../signup']">Not a user ?</button>
       </div>
     </div>
     <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>

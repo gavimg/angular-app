@@ -10,7 +10,7 @@ const userRoutes = require('./routes/user');
 
 const app  = express();
 
-const MONGODB_URI = 'mongodb+srv://gavi_mg:gavi_931@cluster0-uxnpr.mongodb.net/meanapp?'
+const MONGODB_URI = 'mongodb+srv://gavi_mg:'+ process.env.MONGO_ATLAS_PW +'@cluster0-uxnpr.mongodb.net/meanapp?'
 
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
