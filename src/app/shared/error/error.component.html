@@ -1,0 +1,9 @@
+<div class="header">
+    <mat-icon aria-hidden="false" aria-label="Warning" *ngIf="data.type === 'warn'">warning</mat-icon>
+    <mat-icon aria-hidden="false" aria-label="Error" *ngIf="data.type === 'error'">error_outline</mat-icon>
+    <span class="title">{{ data.type }}</span>
+</div>
+<p class="content">{{ data.content }}</p>
+<div class="footer">
+  <button class="btn btn-danger" (click)="onNoClick()">Got It!</button>
+</div>

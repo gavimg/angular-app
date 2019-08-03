@@ -4,17 +4,22 @@ import { HeaderComponent } from './header/header.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { RouterModule } from '@angular/router';
+import { ErrorComponent } from './error/error.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
-  declarations: [HeaderComponent, SidePanelComponent, BreadcrumbComponent],
+  declarations: [HeaderComponent, SidePanelComponent, BreadcrumbComponent, ErrorComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ],
   exports: [
     HeaderComponent,
     SidePanelComponent,
-    BreadcrumbComponent
-  ]
+    BreadcrumbComponent,
+    ErrorComponent
+  ],
+  entryComponents: [ ErrorComponent]
 })
 export class SharedModule { }

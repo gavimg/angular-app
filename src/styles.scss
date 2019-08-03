@@ -26,3 +26,47 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+.error-dialog .mat-dialog-container {
+  padding: 0;
+  app-error {
+    .header {
+      background: #f44336;
+      padding: 10px 5px;
+      mat-icon {
+        font-size: 30px;
+        color: #fff;
+        vertical-align: middle;
+      }
+      .title {
+        height: 24px;
+        vertical-align: top;
+        padding-left: 20px;
+        font-size: 24px;
+        color: #fff;
+        text-transform: capitalize;
+      }
+    }
+    .content {
+      padding: 20px;
+      font-size: 1.25rem;
+    }
+    .footer {
+      text-align: right;
+      padding: 10px;
+      .btn-danger {
+        color: #fff;
+        background-color: #f44336;
+        border-color: #f44336;
+        &:hover {
+          color: #fff;
+          background-color: #f44336;
+          border-color: #f44336;
+        }
+    }
+    }
+  }
+}
+

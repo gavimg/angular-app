@@ -11,7 +11,7 @@
         <p class="error" *ngIf="form.get('email').invalid && form.get('email').touched">Email required!</p>
         <mat-form-field>
           <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'">
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
             [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>

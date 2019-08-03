@@ -9,11 +9,11 @@ const routes: Routes = [
     children: [
       {
         path: 'users',
-        loadChildren: './../users/users.module#UsersModule',
+        loadChildren: '../users/users.module#UsersModule',
       },
       {
         path: 'posts',
-        loadChildren: './../post/post.module#PostModule',
+        loadChildren: '../post/post.module#PostModule',
       }
     ]
   }
