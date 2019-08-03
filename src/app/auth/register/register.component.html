@@ -22,7 +22,7 @@
       <div class="form-footer">
         <p class="lead error" *ngIf="registerError">Invalid Username or Password!!</p>
         <button class="btn register-btn">Register</button>
-        <button class="btn signup-btn" type="button">Login</button>
+        <button class="btn signup-btn" type="button" [routerLink]="['/login']">Login</button>
       </div>
     </div>
     <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>

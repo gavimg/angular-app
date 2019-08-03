@@ -49,7 +49,8 @@ export class PostCreateComponent implements OnInit {
             id: postData._id,
             title: postData.title,
             content: postData.content,
-            imagePath: postData.imagePath
+            imagePath: postData.imagePath,
+            creator: postData.creator
           };
           this.form.setValue({
             title: this.post.title,
@@ -79,7 +80,6 @@ export class PostCreateComponent implements OnInit {
     this.router.navigate(['/home/posts/list']);
   }
   onSavePost() {
-    console.log(this.form.value);
     if (this.form.invalid) {
       return;
     }

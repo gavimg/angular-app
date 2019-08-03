@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [RegisterComponent, LoginComponent, ResetPasswordComponent],
@@ -13,7 +14,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     RegisterComponent,

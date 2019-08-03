@@ -9,13 +9,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
 import {
   MatToolbarModule,
   MatExpansionModule
 } from "@angular/material";
 
 // primeng
-import {TableModule} from 'primeng/table';
+// import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [],
@@ -33,8 +34,9 @@ import {TableModule} from 'primeng/table';
     MatToolbarModule,
     MatExpansionModule,
     MatPaginatorModule,
+    MatDialogModule,
     // primeng module
-    TableModule
+    // TableModule
   ],
   exports: [
     MatCardModule,
@@ -49,8 +51,9 @@ import {TableModule} from 'primeng/table';
     MatToolbarModule,
     MatExpansionModule,
     MatPaginatorModule,
+    MatDialogModule,
     // primeng module
-    TableModule
+    // TableModule
   ]
 })
 export class MaterialModule { }

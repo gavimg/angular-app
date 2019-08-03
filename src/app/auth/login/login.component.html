@@ -3,7 +3,6 @@
     <div class="form-container">
       <div class="form-header">
         <img class="img-circle" src="assets/login-icon.jpg">
-        <!-- <p>Some user information</p> -->
       </div>
       <div class="form-content">
         <mat-form-field>
@@ -22,7 +21,7 @@
       <div class="form-footer">
         <p class="lead error" *ngIf="loginError">Invalid Email or Password!!</p>
         <button class="btn login-btn">Login</button>
-        <button class="btn signup-btn" type="button">Sign Up</button>
+        <button class="btn signup-btn" type="button" [routerLink]="['/register']">Sign Up</button>
       </div>
     </div>
     <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>

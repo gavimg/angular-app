@@ -12,11 +12,13 @@ const app  = express();
 
 const MONGODB_URI = 'mongodb+srv://gavi_mg:gavi_931@cluster0-uxnpr.mongodb.net/meanapp?'
 
-mongoose.connect(MONGODB_URI)
+
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
 .then(() => {
   console.log('Connected to database!');
 })
-.catch(() => {
+.catch((error) => {
+  console.log(error)
   console.log('Connection failed!');
 })
 
