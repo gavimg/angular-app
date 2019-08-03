@@ -74,7 +74,7 @@ export class AuthService {
 
   autoAuthUser() {
     const authInformation = this.getAuthData();
-    if(!authInformation) {
+    if (!authInformation) {
       return;
     }
     const now  = new Date();
@@ -121,7 +121,7 @@ export class AuthService {
     const token = localStorage.getItem('token');
     const expirationDate = localStorage.getItem('expiration');
     const userId = localStorage.getItem('userId');
-    if(!token || !expirationDate || userId)  {
+    if(!token || !expirationDate || !userId)  {
       return;
     }
     return {

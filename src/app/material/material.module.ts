@@ -13,10 +13,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {
   MatToolbarModule,
   MatExpansionModule
-} from "@angular/material";
+} from '@angular/material';
 
-// primeng
-// import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [],
@@ -35,8 +33,6 @@ import {
     MatExpansionModule,
     MatPaginatorModule,
     MatDialogModule,
-    // primeng module
-    // TableModule
   ],
   exports: [
     MatCardModule,
@@ -52,8 +48,6 @@ import {
     MatExpansionModule,
     MatPaginatorModule,
     MatDialogModule,
-    // primeng module
-    // TableModule
   ]
 })
 export class MaterialModule { }

@@ -62,7 +62,9 @@ router.get('', (req, res, next) => {
   postQuery
   .then(documents => {
     posts = documents;
-    return Post.count();
+    // collection.count is deprecated, and will be removed in a future version.
+    // Use collection.countDocuments or collection.estimatedDocumentCount instead
+    return Post.countDocuments();
   }).then(count => {
     res.status(200).json({
       message: 'Posts fetched successfully!',
