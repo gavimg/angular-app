@@ -13,12 +13,6 @@
       "childrens": []
     },
     {
-      "name": "Messages",
-      "path": "messages",
-      "icon": "fa fa-envelope",
-      "childrens": []
-    },
-    {
       "name": "Analytics",
       "path": "analytics",
       "icon": "fa fa-bar-chart",

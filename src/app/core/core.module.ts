@@ -5,12 +5,10 @@ import { CoreRoutingModule } from './core-routing.module';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { AnalyticsComponent } from '../analytics/analytics.component';
 
 @NgModule({
   declarations: [
     MainLayoutComponent,
-    AnalyticsComponent
   ],
   imports: [
     CommonModule,

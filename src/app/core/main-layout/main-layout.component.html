@@ -1,5 +1,7 @@
 <app-header (menuClickEvent)="toggleMenu()" ></app-header>
-<app-side-panel [showOrHideMenu]="showOrHideMenu"></app-side-panel>
 <div class="main-content">
-    <router-outlet></router-outlet>
+    <app-side-panel [showOrHideMenu]="showOrHideMenu"></app-side-panel>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
 </div>

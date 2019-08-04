@@ -14,6 +14,14 @@ const routes: Routes = [
       {
         path: 'posts',
         loadChildren: '../post/post.module#PostModule',
+      },
+      {
+        path: 'analytics',
+        loadChildren: '../analytics/analytics.module#AnalyticsModule',
+      },
+      {
+        path: 'help',
+        loadChildren: '../help/help.module#HelpModule',
       }
     ]
   }
