@@ -1,11 +1,12 @@
+@import '../../../theme/variables';
 
 .header {
     position: absolute;
     width: 100%;
     z-index: 3;
     height: 44px;
-    background-color: #fff;
-    border-bottom: 3px solid #2d3d51;
+    background-color: $primary;
+    border-bottom: 3px solid $border;
 
     .logo {
         height: 44px;
@@ -26,12 +27,12 @@
         top: 15px;
         right: 30px;
     }
-    
+
 }
 
 @media screen and (min-width: 600px) {
     .header {
-        background-color: #35475e;
+        background-color: $primary;
         z-index: 1;
         .logo {
             display: none;

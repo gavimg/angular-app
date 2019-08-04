@@ -24,7 +24,9 @@ export class PostListComponent implements OnInit, OnDestroy {
   private authListnerSubs: Subscription;
 
 
-  constructor(public postsService: PostsService, private authService: AuthService) { }
+  constructor(
+    public postsService: PostsService,
+    private authService: AuthService) { }
 
   ngOnInit() {
     this.isLoading = true;

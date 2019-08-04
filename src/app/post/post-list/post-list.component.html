@@ -20,4 +20,3 @@
               [pageSizeOptions]="pageSizeOptions" (page)="onChangePage($event)">
 </mat-paginator>
 <p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No posts added yet!</p>
-<button mat-button *ngIf="isAuthenticated" (click)="logout()">logout</button>

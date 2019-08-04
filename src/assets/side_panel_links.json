@@ -1,0 +1,45 @@
+{
+  "sideMenuLinks": [
+    {
+      "name": "User",
+      "path": "users",
+      "icon": "fa fa-users",
+      "childrens": []
+    },
+    {
+      "name": "Post",
+      "path": "posts",
+      "icon": "fa fa-users",
+      "childrens": []
+    },
+    {
+      "name": "Messages",
+      "path": "messages",
+      "icon": "fa fa-envelope",
+      "childrens": []
+    },
+    {
+      "name": "Analytics",
+      "path": "analytics",
+      "icon": "fa fa-bar-chart",
+      "childrens": [
+        {
+          "name": "Link1",
+          "path": "link2",
+          "childrens": []
+        },
+        {
+          "name": "Link2",
+          "path": "link2",
+          "childrens": []
+        }
+      ]
+    },
+    {
+      "name": "Help",
+      "path": "help",
+      "icon": "fa fa-star",
+      "childrens": []
+    }
+  ]
+}
